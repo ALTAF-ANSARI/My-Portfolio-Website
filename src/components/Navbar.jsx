@@ -3,10 +3,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { useTheme } from "@/context/ThemeContext";
 
-// NOTE: "About" and "Blog" were removed — there's no matching section/page
-// for either yet, so they were dead links that did nothing when clicked.
-// Add an id="about" section (or a /blog route) and restore these once that
-// content exists.
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Skills", href: "#skills" },
@@ -46,9 +42,8 @@ export default function Navbar() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Cream nav styling only makes sense while sitting on top of the light
-  // (default) Hero. Once scrolled away, or once the Hero is switched to its
-  // dark variant, the nav should match the rest of the page's dark theme.
+  // Keep the light navigation only at the very top of the light Hero.
+  // Once the user scrolls, use the same solid dark palette as the footer.
   const showLightNav = !scrolled && !heroDark;
 
   return (
@@ -57,12 +52,11 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           showLightNav
             ? "bg-[#F3EFE0]/90 backdrop-blur-md py-2"
-            : "bg-bg-primary/90 backdrop-blur-md border-b border-border-color"
+            : "bg-[#050705] border-b border-[#1f2b21] shadow-lg py-0"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
             <a
               href="#home"
               onClick={(e) => { e.preventDefault(); handleNavClick("#home"); }}
@@ -77,7 +71,6 @@ export default function Navbar() {
               <span className={`text-xl ml-0.5 ${showLightNav ? "text-[#2f6b45]" : "text-accent-green"}`}>•</span>
             </a>
 
-            {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-2">
               {navLinks.map((link) => {
                 const id = link.href.replace("#", "");
@@ -101,7 +94,6 @@ export default function Navbar() {
               })}
             </nav>
 
-            {/* Right side CTA */}
             <div className="flex items-center gap-4">
               <button
                 onClick={() => handleNavClick("#contact")}
@@ -109,9 +101,9 @@ export default function Navbar() {
                   showLightNav ? "bg-[#1c1c14] text-white hover:bg-[#33321f]" : "bg-white text-black hover:bg-gray-200"
                 }`}
               >
-                Let&apos;s Connect
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                Let's Connect
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24">
+                  <path stroke="currentColor" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </button>
 
@@ -126,26 +118,25 @@ export default function Navbar() {
                 }`}
               >
                 {heroDark ? (
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 ) : (
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                   </svg>
                 )}
               </button>
 
-              {/* Mobile hamburger */}
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className={`md:hidden p-2 hover:text-[#2f6b45] ${showLightNav ? "text-[#1c1c14]" : "text-text-secondary"}`}
               >
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
                   {mobileOpen ? (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <path stroke="currentColor" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   ) : (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    <path stroke="currentColor" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                   )}
                 </svg>
               </button>
@@ -154,7 +145,6 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Menu */}
       {mobileOpen && (
         <div className="fixed inset-0 z-40 bg-bg-primary pt-24 px-4 md:hidden">
           <nav className="flex flex-col gap-4 text-center">
