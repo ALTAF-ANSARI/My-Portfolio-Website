@@ -131,6 +131,7 @@ export default function Navbar() {
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
                 className={`md:hidden p-2 hover:text-[#2f6b45] ${showLightNav ? "text-[#1c1c14]" : "text-text-secondary"}`}
+                aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
               >
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
                   {mobileOpen ? (
@@ -146,21 +147,31 @@ export default function Navbar() {
       </header>
 
       {mobileOpen && (
-        <div className="fixed inset-0 z-40 bg-bg-primary pt-24 px-4 md:hidden">
-          <nav className="flex flex-col gap-4 text-center">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
-                className="text-xl font-medium text-text-secondary hover:text-accent-green"
-              >
-                {link.label}
-              </a>
-            ))}
+        <div className="fixed top-16 left-0 right-0 bottom-0 z-40 md:hidden bg-[#050705] border-t border-[#2f6b45] shadow-2xl overflow-y-auto">
+          <nav className="flex flex-col gap-3 px-6 py-8">
+            {navLinks.map((link) => {
+              const id = link.href.replace("#", "");
+              const isActive = activeSection === id;
+
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
+                  className={`w-full rounded-xl px-5 py-4 text-lg font-semibold transition-all duration-200 border ${
+                    isActive
+                      ? "bg-[#84cc16] text-black border-[#84cc16] shadow-lg shadow-[#84cc16]/20"
+                      : "bg-[#0b100c] text-white border-[#1f2b21] hover:bg-[#111812] hover:border-[#84cc16] hover:text-[#84cc16]"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
+
             <button
               onClick={toggleHeroTheme}
-              className="mt-4 mx-auto flex items-center gap-2 px-5 py-2 rounded-full border border-border-color text-sm text-text-secondary hover:text-text-primary"
+              className="mt-3 w-full rounded-xl px-5 py-4 flex items-center justify-center gap-2 border border-[#1f2b21] bg-white text-black font-semibold text-base hover:bg-[#f1f1f1] transition-colors"
             >
               {heroDark ? "☀️ Light hero" : "🌙 Dark hero"}
             </button>
