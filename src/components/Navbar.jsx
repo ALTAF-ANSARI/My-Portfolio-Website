@@ -42,8 +42,6 @@ export default function Navbar() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Keep the light navigation only at the very top of the light Hero.
-  // Once the user scrolls, use the same solid dark palette as the footer.
   const showLightNav = !scrolled && !heroDark;
 
   return (
@@ -62,12 +60,8 @@ export default function Navbar() {
               onClick={(e) => { e.preventDefault(); handleNavClick("#home"); }}
               className="flex items-center gap-1 group"
             >
-              <span className={`font-display font-bold text-xl ${showLightNav ? "text-[#1c1c14]" : "text-text-primary"}`}>
-                Altaf
-              </span>
-              <span className={`font-display font-bold text-xl ${showLightNav ? "text-[#1c1c14]" : "text-text-primary"}`}>
-                Ansari
-              </span>
+              <span className={`font-display font-bold text-xl ${showLightNav ? "text-[#1c1c14]" : "text-text-primary"}`}>Altaf</span>
+              <span className={`font-display font-bold text-xl ${showLightNav ? "text-[#1c1c14]" : "text-text-primary"}`}>Ansari</span>
               <span className={`text-xl ml-0.5 ${showLightNav ? "text-[#2f6b45]" : "text-accent-green"}`}>•</span>
             </a>
 
@@ -119,7 +113,7 @@ export default function Navbar() {
               >
                 {heroDark ? (
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    <path stroke="currentColor" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0z" />
                   </svg>
                 ) : (
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24">
@@ -147,8 +141,8 @@ export default function Navbar() {
       </header>
 
       {mobileOpen && (
-        <div className="fixed top-16 left-0 right-0 bottom-0 z-40 md:hidden bg-[#050705] border-t border-[#2f6b45] shadow-2xl overflow-y-auto">
-          <nav className="flex flex-col gap-3 px-6 py-8">
+        <div className="fixed top-[4.75rem] left-4 right-4 z-40 md:hidden max-h-[calc(100vh-6rem)] overflow-y-auto rounded-2xl bg-[#050705] border border-[#2f6b45] shadow-2xl">
+          <nav className="flex flex-col gap-2 p-4">
             {navLinks.map((link) => {
               const id = link.href.replace("#", "");
               const isActive = activeSection === id;
@@ -158,7 +152,7 @@ export default function Navbar() {
                   key={link.label}
                   href={link.href}
                   onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
-                  className={`w-full rounded-xl px-5 py-4 text-lg font-semibold transition-all duration-200 border ${
+                  className={`w-full rounded-xl px-4 py-3 text-base font-semibold transition-all duration-200 border ${
                     isActive
                       ? "bg-[#84cc16] text-black border-[#84cc16] shadow-lg shadow-[#84cc16]/20"
                       : "bg-[#0b100c] text-white border-[#1f2b21] hover:bg-[#111812] hover:border-[#84cc16] hover:text-[#84cc16]"
@@ -171,7 +165,7 @@ export default function Navbar() {
 
             <button
               onClick={toggleHeroTheme}
-              className="mt-3 w-full rounded-xl px-5 py-4 flex items-center justify-center gap-2 border border-[#1f2b21] bg-white text-black font-semibold text-base hover:bg-[#f1f1f1] transition-colors"
+              className="mt-2 w-full rounded-xl px-4 py-3 flex items-center justify-center gap-2 border border-[#1f2b21] bg-white text-black font-semibold text-sm hover:bg-[#f1f1f1] transition-colors"
             >
               {heroDark ? "☀️ Light hero" : "🌙 Dark hero"}
             </button>
