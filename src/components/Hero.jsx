@@ -38,9 +38,6 @@ export default function Hero() {
     { icon: Mail, href: `mailto:${personal.email}`, label: "Email" },
   ];
 
-  // Two small palettes so the whole section can flip between the
-  // reference's light "cream" look (default) and a dark variant that
-  // matches the rest of the page, driven by the Navbar's moon toggle.
   const c = heroDark
     ? {
         section: "bg-[#050705]",
@@ -94,7 +91,6 @@ export default function Hero() {
       id="home"
       className={`relative overflow-hidden pt-32 pb-24 transition-colors duration-500 ${c.section}`}
     >
-      {/* Decorative background waves / blobs */}
       <div className="pointer-events-none absolute inset-0 -z-0">
         <div className={`absolute -top-10 right-0 h-[520px] w-[60%] rounded-full blur-3xl opacity-70 transition-colors duration-500 ${c.blob1}`} />
         <div className={`absolute bottom-0 right-[8%] h-[300px] w-[420px] rounded-full blur-2xl opacity-60 transition-colors duration-500 ${c.blob2}`} />
@@ -154,8 +150,19 @@ export default function Hero() {
               </a>
             </div>
 
+            {/* Straight, clean quote placed directly beneath the Resume button
+                so it sits in the visual space between the CTA area and profile image. */}
+            <div className="pt-1">
+              <div className="inline-flex flex-col items-start">
+                <p className={`text-lg sm:text-xl font-semibold tracking-wide leading-snug transition-colors duration-500 ${c.quoteText}`}>
+                  “Consistent Progress Creates Extraordinary Results.”
+                </p>
+                <div className={`w-16 h-0.5 mt-2 rounded-full transition-colors duration-500 ${c.quoteUnderline}`} />
+              </div>
+            </div>
+
             {/* Socials */}
-            <div className="flex gap-4 pt-6">
+            <div className="flex gap-4 pt-3">
               {socials.map(({ icon: Icon, href, label }, i) => (
                 <a
                   key={i}
@@ -183,7 +190,6 @@ export default function Hero() {
               </svg>
             </div>
 
-            {/* Terminal box — already dark in both variants, matches the reference */}
             <div className="absolute top-4 right-0 rounded-xl p-4 hidden lg:block z-20 font-mono text-sm shadow-xl bg-[#0f1510]/95 border border-[#243026]">
               <div className="flex items-center gap-2 mb-2 border-b border-[#243026] pb-2">
                 <span className="w-3 h-3 rounded-full bg-red-500" />
@@ -196,14 +202,6 @@ export default function Hero() {
               <div><span className="text-[#84cc16]">{">"}</span> <span className="text-yellow-300">impact()</span></div>
               <div><span className="text-[#84cc16]">{">"}</span> <span className="text-yellow-300">repeat()</span></div>
               <div className="animate-pulse text-[#84cc16]">_</div>
-            </div>
-
-            {/* Quote */}
-            <div className="absolute bottom-24 right-0 hidden lg:block z-20 max-w-[210px] text-right">
-              <p className={`text-lg italic font-serif font-semibold leading-snug mb-2 transition-colors duration-500 ${c.quoteText}`}>
-                &ldquo;Consistent Progress Creates Extraordinary Results.&rdquo;
-              </p>
-              <div className={`w-10 h-0.5 ml-auto transition-colors duration-500 ${c.quoteUnderline}`} />
             </div>
 
             {/* User image */}
