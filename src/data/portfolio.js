@@ -14,12 +14,7 @@ export const personal = {
   linkedin: "https://linkedin.com/in/altafansari0011/",
   resume: "/resume.pdf",
   locationShort: "Based in India",
-  // TODO: add your real LeetCode profile URL, e.g. "https://leetcode.com/u/yourhandle/"
-  // Left blank until provided — the UI hides the link rather than pointing it at a broken URL.
   leetcode: "https://leetcode.com/u/2802_ALTAF/",
-  // Same treatment for X/Instagram — add real profile URLs here when you have
-  // them and the icons will appear automatically; until then they're hidden
-  // rather than linking to "#".
   x: "https://x.com/Altaf____Ansari",
   instagram: "",
 };
@@ -31,43 +26,41 @@ export const stats = [
   { label: "To Opportunities", value: "Open", isText: true, icon: "briefcase" },
 ];
 
-// Skill categories mirror the resume's own groupings exactly.
-// icon = devicon class (colored "-original"/"-plain-wordmark" variants used
-// wherever the tech has an official brand color, so the badges are colored
-// like the reference design rather than flat single-tone icons).
+// Each skill includes its official documentation URL so the skill card is
+// directly useful as a learning/reference shortcut.
 export const skills = {
-  All: [], // populated below programmatically-equivalent (kept explicit for clarity)
+  All: [],
   Languages: [
-    { name: "C", icon: "devicon-c-original" },
-    { name: "C++", icon: "devicon-cplusplus-plain" },
-    { name: "Java", icon: "devicon-java-plain" },
-    { name: "JavaScript", icon: "devicon-javascript-plain" },
-    { name: "TypeScript", icon: "devicon-typescript-plain" },
+    { name: "C", icon: "devicon-c-original", docs: "https://www.gnu.org/software/c-intro-and-ref/manual/c-intro-and-ref.html" },
+    { name: "C++", icon: "devicon-cplusplus-plain", docs: "https://isocpp.org/get-started" },
+    { name: "Java", icon: "devicon-java-plain", docs: "https://dev.java/learn/" },
+    { name: "JavaScript", icon: "devicon-javascript-plain", docs: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" },
+    { name: "TypeScript", icon: "devicon-typescript-plain", docs: "https://www.typescriptlang.org/docs/handbook/" },
   ],
   "Web Technologies": [
-    { name: "HTML5", icon: "devicon-html5-plain" },
-    { name: "CSS3", icon: "devicon-css3-plain" },
-    { name: "React.js", icon: "devicon-react-original" },
-    { name: "Next.js", icon: "devicon-nextjs-plain" },
-    { name: "Node.js", icon: "devicon-nodejs-plain" },
-    { name: "Express.js", icon: "devicon-express-original" },
+    { name: "HTML5", icon: "devicon-html5-plain", docs: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { name: "CSS3", icon: "devicon-css3-plain", docs: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { name: "React.js", icon: "devicon-react-original", docs: "https://react.dev/learn" },
+    { name: "Next.js", icon: "devicon-nextjs-plain", docs: "https://nextjs.org/docs" },
+    { name: "Node.js", icon: "devicon-nodejs-plain", docs: "https://nodejs.org/docs/latest/api/" },
+    { name: "Express.js", icon: "devicon-express-original", docs: "https://expressjs.com/en/starter/installing.html" },
   ],
   "Core Concepts & Databases": [
-    { name: "DBMS", icon: "devicon-mysql-plain" },
-    { name: "DSA", icon: "devicon-cplusplus-plain" },
-    { name: "MongoDB", icon: "devicon-mongodb-plain" },
-    { name: "PostgreSQL", icon: "devicon-postgresql-plain" },
+    { name: "DBMS", icon: "devicon-mysql-plain", docs: "https://dev.mysql.com/doc/" },
+    { name: "DSA", icon: "devicon-cplusplus-plain", docs: "https://en.cppreference.com/w/cpp.html" },
+    { name: "MongoDB", icon: "devicon-mongodb-plain", docs: "https://www.mongodb.com/docs/" },
+    { name: "PostgreSQL", icon: "devicon-postgresql-plain", docs: "https://www.postgresql.org/docs/current/" },
   ],
   "Tools & Platforms": [
-    { name: "Git", icon: "devicon-git-plain" },
-    { name: "GitHub", icon: "devicon-github-original" },
-    { name: "VS Code", icon: "devicon-vscode-plain" },
-    { name: "AWS", icon: "devicon-amazonwebservices-plain-wordmark" },
-    { name: "Docker", icon: "devicon-docker-plain" },
-    { name: "Jira", icon: "devicon-jira-plain" },
+    { name: "Git", icon: "devicon-git-plain", docs: "https://git-scm.com/book/en/v2" },
+    { name: "GitHub", icon: "devicon-github-original", docs: "https://docs.github.com/" },
+    { name: "VS Code", icon: "devicon-vscode-plain", docs: "https://code.visualstudio.com/docs" },
+    { name: "AWS", icon: "devicon-amazonwebservices-plain-wordmark", docs: "https://docs.aws.amazon.com/getting-started/" },
+    { name: "Docker", icon: "devicon-docker-plain", docs: "https://docs.docker.com/" },
+    { name: "Jira", icon: "devicon-jira-plain", docs: "https://support.atlassian.com/jira/" },
   ],
 };
-// Flatten for the "All" tab so every resume skill shows up there too.
+
 skills.All = [
   ...skills.Languages,
   ...skills["Web Technologies"],
@@ -75,22 +68,8 @@ skills.All = [
   ...skills["Tools & Platforms"],
 ];
 
-// Resume "Soft Skills" line — shown as plain tags under the tech grid.
 export const softSkills = ["Problem-Solving", "Communication", "Adaptability", "Teamwork"];
 
-// ------------------------------------------------------------
-// PROJECTS
-// Pulled from the live GitHub account (github.com/ALTAF-ANSARI),
-// not just resume text, per your request that project links be
-// real and functional. Two notes on differences from the resume:
-//
-// 1. The resume lists "InterviewPrep AI" as a project, but there is
-//    no public repo for it on the GitHub account — so it's swapped
-//    here for "Student Management System", which IS a real, public,
-//    fully-authored repo (built for the LPU BDSA course).
-// 2. "MindForum" on GitHub is a fork of asmitt2903/MindForum_A_Question_Platform,
-//    not an original repo — labeled honestly below as a fork/collaboration.
-// ------------------------------------------------------------
 export const projects = [
   {
     id: 1,
@@ -125,9 +104,6 @@ export const projects = [
   },
 ];
 
-// ------------------------------------------------------------
-// EDUCATION & TRAINING — exact from resume
-// ------------------------------------------------------------
 export const education = [
   {
     id: 1,
@@ -167,9 +143,6 @@ export const education = [
   },
 ];
 
-// ------------------------------------------------------------
-// ACHIEVEMENTS — exact from resume's "Extracurricular / Achievement" section
-// ------------------------------------------------------------
 export const achievements = [
   {
     id: 1,
@@ -197,7 +170,6 @@ export const achievements = [
   },
 ];
 
-// Resume "Certificates" section — exact
 export const certificates = [
   { title: "AI Tools Workshop", issuer: "be10x", date: "August 2026" },
   { title: "Introduction to Generative AI", issuer: "Simplilearn", date: "July 2026" },
