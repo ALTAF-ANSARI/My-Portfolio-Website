@@ -25,7 +25,7 @@ export const personal = {
 };
 
 export const stats = [
-  { label: "DSA Problems Solved", value: 300, suffix: "+", icon: "code" },
+  { label: "DSA Problems Solved", value: 400, suffix: "+", icon: "code" },
   { label: "Full Stack Projects", value: 3, suffix: "+", icon: "box" },
   { label: "CGPA (LPU)", value: 8.58, suffix: "", decimals: 2, icon: "star" },
   { label: "To Opportunities", value: "Open", isText: true, icon: "briefcase" },
@@ -174,7 +174,7 @@ export const achievements = [
   {
     id: 1,
     icon: "award",
-    title: "300+",
+    title: "400+",
     subtitle: "DSA Problems Solved (LeetCode & GFG)",
   },
   {
