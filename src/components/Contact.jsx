@@ -151,7 +151,7 @@ export default function Contact() {
                 />
               </div>
 
-              <button type="submit" disabled={submitting} className="btn-primary w-full disabled:opacity-60 disabled:cursor-not-allowed">
+              <button type="submit" disabled={submitting} className="btn-secondary w-full disabled:opacity-60 disabled:cursor-not-allowed">
                 {submitting ? "Sending..." : "Send Message"}
                 {!submitting && (
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
