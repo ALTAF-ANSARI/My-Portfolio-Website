@@ -23,21 +23,21 @@ export default function BeyondProfessionalSphere() {
   return (
     <section id="beyond" className="relative overflow-hidden border-t border-[#223126] bg-[#070b08] py-20 sm:py-24">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[8%] top-16 h-40 w-40 rounded-full bg-[#88b77c]/5 blur-3xl" />
-        <div className="absolute right-[10%] bottom-10 h-52 w-52 rounded-full bg-[#6f9d68]/5 blur-3xl" />
+        <div className="absolute left-[8%] top-16 h-40 w-40 rounded-full bg-[#84cc16]/5 blur-3xl" />
+        <div className="absolute right-[10%] bottom-10 h-52 w-52 rounded-full bg-[#65a30d]/5 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 flex items-end justify-between gap-8">
           <div>
             <div className="mb-2 flex items-center gap-3">
-              <span className="h-px w-10 bg-[#8fbd82]" />
-              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.32em] text-[#92b88a]">
+              <span className="h-px w-10 bg-[#84cc16]" />
+              <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.32em] text-[#84cc16]">
                 Beyond the Professional Sphere
               </p>
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-[#f1f4ed] sm:text-4xl">
-              Beyond the <span className="text-[#9bc88f]">Professional Sphere</span>
+              Beyond the <span className="text-[#84cc16]">Professional Sphere</span>
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[#a4ada4]">
               Technology builds my career, but these passions keep me grounded.
@@ -47,7 +47,7 @@ export default function BeyondProfessionalSphere() {
           </div>
 
           <div className="hidden shrink-0 pb-2 text-right sm:block">
-            <p className="hand-drawn rotate-[-5deg] text-2xl leading-[0.9] text-[#a9c89d]">
+            <p className="hand-drawn rotate-[-5deg] text-2xl leading-[0.9] text-[#84cc16]">
               Good
               <br />
               Books
@@ -56,24 +56,24 @@ export default function BeyondProfessionalSphere() {
               <br />
               Thoughts
             </p>
-            <div className="ml-auto mt-2 h-px w-12 rotate-[-8deg] bg-[#7fa774]" />
+            <div className="ml-auto mt-2 h-px w-12 rotate-[-8deg] bg-[#84cc16]" />
           </div>
         </div>
 
         <div className="grid gap-5 lg:grid-cols-2">
-          <article className="group relative min-h-[300px] overflow-hidden rounded-xl border border-[#26362a] bg-[#0b110d] p-5 shadow-[0_18px_60px_rgba(0,0,0,0.28)] transition-all duration-300 hover:-translate-y-1 hover:border-[#5e8759]">
-            <div className="absolute right-4 top-4 rounded-full border border-[#324535] bg-[#101a13] px-3 py-1 text-[9px] font-medium tracking-wide text-[#91b987]">
+          <article className="group relative min-h-[300px] overflow-hidden rounded-xl border border-[#26362a] bg-[#0b110d] p-5 shadow-[0_18px_60px_rgba(0,0,0,0.28)] transition-all duration-300 hover:-translate-y-1 hover:border-[#84cc16]">
+            <div className="absolute right-4 top-4 rounded-full border border-[#324535] bg-[#101a13] px-3 py-1 text-[9px] font-medium tracking-wide text-[#84cc16]">
               Words that Heal
             </div>
 
             <div className="flex max-w-[62%] items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#17321e] text-[#9bc88f]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#16300f] text-[#84cc16]">
                 <FeatherIcon />
               </div>
               <div>
                 <p className="text-xs font-semibold text-[#c2c9c0]">Interested in</p>
                 <h3 className="mt-0.5 text-xl font-bold text-[#f0f3ed] sm:text-2xl">
-                  Hindi <span className="text-[#9bc88f]">Poetry</span>
+                  Hindi <span className="text-[#84cc16]">Poetry</span>
                 </h3>
                 <p className="mt-3 text-xs leading-relaxed text-[#a1aaa1]">
                   I find peace in Hindi poetry. The depth of emotions, simplicity of words,
@@ -88,7 +88,7 @@ export default function BeyondProfessionalSphere() {
             </div>
 
             <div className="absolute bottom-5 left-5 right-5 rounded-lg border border-[#213126] bg-[#0f1812] px-4 py-3 sm:right-[42%]">
-              <span className="absolute -left-1 top-2 text-2xl leading-none text-[#9bc88f]">“</span>
+              <span className="absolute -left-1 top-2 text-2xl leading-none text-[#84cc16]">“</span>
               <p className="pl-3 text-[10px] italic leading-relaxed text-[#c5cec4]">
                 Shabdon mein woh taakat hai, jo khamosh dilon ko bhi awaaz de deti hai.
               </p>
@@ -96,19 +96,19 @@ export default function BeyondProfessionalSphere() {
             </div>
           </article>
 
-          <article className="group relative min-h-[300px] overflow-hidden rounded-xl border border-[#26362a] bg-[#0b110d] p-5 shadow-[0_18px_60px_rgba(0,0,0,0.28)] transition-all duration-300 hover:-translate-y-1 hover:border-[#5e8759]">
-            <div className="absolute right-4 top-4 rounded-full border border-[#324535] bg-[#101a13] px-3 py-1 text-[9px] font-medium tracking-wide text-[#91b987]">
+          <article className="group relative min-h-[300px] overflow-hidden rounded-xl border border-[#26362a] bg-[#0b110d] p-5 shadow-[0_18px_60px_rgba(0,0,0,0.28)] transition-all duration-300 hover:-translate-y-1 hover:border-[#84cc16]">
+            <div className="absolute right-4 top-4 rounded-full border border-[#324535] bg-[#101a13] px-3 py-1 text-[9px] font-medium tracking-wide text-[#84cc16]">
               A Page at a Time
             </div>
 
             <div className="flex max-w-[62%] items-start gap-4">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#17321e] text-[#9bc88f]">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#16300f] text-[#84cc16]">
                 <BookIcon />
               </div>
               <div>
                 <p className="text-xs font-semibold text-[#c2c9c0]">Reading</p>
                 <h3 className="mt-0.5 text-xl font-bold text-[#f0f3ed] sm:text-2xl">
-                  <span className="text-[#9bc88f]">Books</span>
+                  <span className="text-[#84cc16]">Books</span>
                 </h3>
                 <p className="mt-3 text-xs leading-relaxed text-[#a1aaa1]">
                   Books are my constant source of learning, motivation, and new perspectives.
@@ -130,7 +130,7 @@ export default function BeyondProfessionalSphere() {
             </div>
 
             <div className="absolute bottom-5 left-5 right-5 rounded-lg border border-[#213126] bg-[#0f1812] px-4 py-3 sm:right-[42%]">
-              <span className="absolute -left-1 top-2 text-2xl leading-none text-[#9bc88f]">“</span>
+              <span className="absolute -left-1 top-2 text-2xl leading-none text-[#84cc16]">“</span>
               <p className="pl-3 text-[10px] italic leading-relaxed text-[#c5cec4]">
                 A reader lives a thousand lives before he dies.
               </p>
