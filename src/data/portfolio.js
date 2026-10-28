@@ -143,6 +143,24 @@ export const education = [
   },
 ];
 
+export const experience = [
+  {
+    id: 1,
+    company: "Glazzarto Technologies Pvt. Ltd.",
+    role: "Full Stack Developer Intern",
+    employmentType: "Internship",
+    period: "Ongoing",
+    summary:
+      "Contributing to web application development with a primary focus on React.js within a MERN-stack environment.",
+    highlights: [
+      "Implementing and refining React.js UI components and frontend flows.",
+      "Debugging frontend issues and making targeted improvements within the existing codebase.",
+      "Using JavaScript and the MERN stack to support maintainable, user-friendly application experiences.",
+    ],
+    tech: ["React.js", "JavaScript", "MERN Stack", "Node.js", "Express.js", "MongoDB"],
+  },
+];
+
 export const achievements = [
   {
     id: 1,
