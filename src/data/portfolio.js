@@ -77,7 +77,7 @@ export const projects = [
     subtitle: "Satellite-Based Stubble Burning Monitoring",
     description: "An administrative dashboard concept for visualizing suspected crop-burning incidents on an interactive map and supporting incident storage, assignment, review, and resolution tracking by district authorities. Satellite data integration and implementation are in progress.",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Leaflet"],
-    github: "https://github.com/ALTAF-ANSARI/AgniDrishti",
+    github: "", // Add the repository URL once the AgniDrishti repo is created.
     demo: "",
     isFork: false,
   },
