@@ -73,6 +73,16 @@ export const softSkills = ["Problem-Solving", "Communication", "Adaptability", "
 export const projects = [
   {
     id: 1,
+    name: "AgniDrishti",
+    subtitle: "Satellite-Based Stubble Burning Monitoring",
+    description: "An administrative dashboard concept for visualizing suspected crop-burning incidents on an interactive map and supporting incident storage, assignment, review, and resolution tracking by district authorities. Satellite data integration and implementation are in progress.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Leaflet"],
+    github: "https://github.com/ALTAF-ANSARI/AgniDrishti",
+    demo: "",
+    isFork: false,
+  },
+  {
+    id: 2,
     name: "LinguaFlow",
     subtitle: "Dynamic Language Translator",
     description: "Full-stack translator supporting 12+ languages with authentication and translation history. Integrates Google Gemini API for AI-powered language processing.",
@@ -82,7 +92,7 @@ export const projects = [
     isFork: false,
   },
   {
-    id: 2,
+    id: 3,
     name: "MindForum",
     subtitle: "Knowledge Sharing Q&A Platform",
     description: "Quora-style platform for posting, answering and discussing questions, integrated with Hugging Face LLMs for Markdown answers. Forked and extended from a collaborative base repo.",
@@ -93,7 +103,7 @@ export const projects = [
     forkedFrom: "asmitt2903/MindForum_A_Question_Platform",
   },
   {
-    id: 3,
+    id: 4,
     name: "Student Management System",
     subtitle: "Advanced Student Record System (C++ / DSA)",
     description: "Console-based student record system built from scratch in C++ — no STL containers. Implements linked lists, a stack for undo, a queue for recent searches, bubble/selection sort and file persistence.",
