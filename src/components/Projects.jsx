@@ -56,7 +56,7 @@ export default function Projects() {
                         <p className="text-lg font-bold tracking-wide text-white">AgniDrishti</p>
                         <p className="text-[10px] font-mono text-accent-green/80">SATELLITE-BASED INCIDENT DASHBOARD</p>
                       </div>
-                      <span className="rounded-md border border-amber-300/30 bg-amber-400/10 px-2 py-1 text-[10px] font-mono text-amber-200">IN DEVELOPMENT</span>
+                      <span role="status" aria-label="Ongoing project" className="inline-flex items-center gap-1.5 rounded-full border border-accent-green/40 bg-accent-green/10 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-accent-green shadow-sm"><span className="h-1.5 w-1.5 rounded-full bg-accent-green animate-pulse"></span>Ongoing Project</span>
                     </div>
                   </div>
                 ) : project.name === "LinguaFlow" || project.name === "MindForum" ? (
