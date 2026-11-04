@@ -175,7 +175,7 @@ export const achievements = [
   {
     id: 1,
     icon: "award",
-    title: "400+",
+    title: "500+",
     subtitle: "DSA Problems Solved (LeetCode & GFG)",
   },
   {
